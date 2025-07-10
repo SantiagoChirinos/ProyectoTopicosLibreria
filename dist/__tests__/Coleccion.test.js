@@ -1,21 +1,19 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const src_1 = require("../src");
+import { Coleccion } from '../src';
 describe("Coleccion prueba", () => {
-    let colecPrueba = new src_1.Coleccion(["Hola"]);
+    let colecPrueba = new Coleccion(["Hola"]);
     beforeEach(() => {
-        colecPrueba = new src_1.Coleccion(["Hola"]);
+        colecPrueba = new Coleccion(["Hola"]);
     });
     afterEach(() => {
         jest.restoreAllMocks();
     });
     it("1- Crear coleccion de String", () => {
-        let colec = new src_1.Coleccion(["Hola"]);
-        expect(colec).toStrictEqual(new src_1.Coleccion(["Hola"]));
+        let colec = new Coleccion(["Hola"]);
+        expect(colec).toStrictEqual(new Coleccion(["Hola"]));
     });
     it("2- añadir un nuevo elemento a una coleccion", () => {
         colecPrueba.agregarComponente("Hola2");
-        expect(colecPrueba).toStrictEqual(new src_1.Coleccion(["Hola", "Hola2"]));
+        expect(colecPrueba).toStrictEqual(new Coleccion(["Hola", "Hola2"]));
     });
     it("3- conseguir los el primer elemento de la coleccion con su función", () => {
         expect(colecPrueba.conseguirSiguienteElemento().next().value).toBe("Hola");
@@ -47,11 +45,11 @@ describe("Coleccion prueba", () => {
         colecPrueba.agregarComponente("Hola7");
         colecPrueba.agregarComponente("Hola8");
         colecPrueba.quitarComponente(4);
-        expect(colecPrueba).toStrictEqual(new src_1.Coleccion(["Hola", "Hola2", "Hola3", "Hola4", "Hola6", "Hola7", "Hola8"]));
+        expect(colecPrueba).toStrictEqual(new Coleccion(["Hola", "Hola2", "Hola3", "Hola4", "Hola6", "Hola7", "Hola8"]));
     });
     it("7- intentar quitar un componente que no existe", () => {
         colecPrueba.quitarComponente(3);
-        expect(colecPrueba).toStrictEqual(new src_1.Coleccion(["Hola"]));
+        expect(colecPrueba).toStrictEqual(new Coleccion(["Hola"]));
     });
 });
 //# sourceMappingURL=Coleccion.test.js.map
