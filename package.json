@@ -14,6 +14,7 @@
   "author": "Santiago chirinos y Jesús Obando",
   "type": "commonjs",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
