@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "Santiago chirinos y Jesús Obando",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "build": "tsc",
