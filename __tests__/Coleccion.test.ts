@@ -1,4 +1,4 @@
-import {Coleccion} from '../src/libreria'
+import {Coleccion} from '../src'
 
 describe("Coleccion prueba",()=>{
     let colecPrueba:Coleccion<string> =new Coleccion(["Hola"])
